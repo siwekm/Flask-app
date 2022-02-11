@@ -18,7 +18,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(res.status_code, 200)
 
         # Test POST
-        form = {"annotation": 170679, "queue": 12040765}
+        form = {"annotation": 12040765, "queue": 170679}
         res = tester.post('/export', data=form, headers=headers)
         self.assertEqual(res.status_code, 200)
 
