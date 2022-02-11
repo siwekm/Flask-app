@@ -13,4 +13,7 @@ EXPOSE 5000
 ENV BASIC_AUTH_USERNAME=myUser123
 ENV BASIC_AUTH_PASSWORD=secretSecret
 
+RUN python -m unittest test.py
+
 CMD ["flask", "run", "-h", "0.0.0.0", "-p", "5000"]
+
